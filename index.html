@@ -10,25 +10,44 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo"><a href="#">4Comfort</a></div>
+            <div class="logo"><img src="./IMG/4comfort_logo.png" alt=""></div>
+            <div class="logoMobile"><p>4</p>Comfort</div>
             <div class="navigation">
+                <div class="bars3 open"><button onclick="mobileDropDown()"><img width="30" src="./IMG/menu-button.png" alt=""></button></div>
+                <div class="bars3 close"><button onclick="mobileDropDown()"><img width="30" src="./IMG/close.png" alt=""></button></div>
                 <nav class="menuDesktop">
-                    <li><a href="">Produtos</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Contato</a></li>
-                    <li><a href="">Trabalhe conosco</a></li>
+                    <ul>
+                        <li><a href="#">Promoções</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Cases de sucesso</a></li>
+                        <li><a href="#">Sobre nós</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="#">Quem somos</a></li>
+                                    <li><a href="#">Nosso time</a></li>
+                                    <li><a href="#">Contato</a></li>
+                                    <li><a href="#">Onde estamos</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>    
+                    </ul>
                 </nav>
-                <nav class="menuMobile">
-                    <li><a href="">Produtos</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Contato</a></li>
-                    <li><a href="">Trabalhe conosco</a></li>    
+                <nav class="menuMobile" id="menuMob">
+                    <li><a href="#">Promoções</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Cases de sucesso</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Nosso time</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Onde estamos</a></li>
+                    <li><a href="#">FAQ</a></li>    
                 </nav>
             </div>
         </header>
         <main>
             <div class="box1">
-                <h1>Alguma imagem</h1>
+                <img src="./IMG/banner.webp" width="200" alt="">
             </div>
             <div class="box2">
                 <h1>Ande com a moda ao seus pés</h1>
@@ -36,5 +55,6 @@
             </div>
         </main>
     </div>
+    <script src="./index.js"></script>
 </body>
 </html>
