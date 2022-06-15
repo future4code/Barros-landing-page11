@@ -302,9 +302,3 @@ main{
         font-size:20px ;
     }
 }
-
-@keyframes logoAnimation {
-    0%{color:var(--alice-blue);}
-    50%{color:var(--gunmetal);}
-    100%{color:var(--alice-blue);}
-}
