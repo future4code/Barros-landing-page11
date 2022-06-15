@@ -1,11 +1,19 @@
+:root{
+    --gunmetal: #2E3237ff;
+    --davys-grey: #4E4C44ff;
+    --alice-blue: #DAE5E8ff;
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container{
     width: 100%;
     height: 100vh;
+    z-index: 0;
 }
 
 header{
@@ -26,6 +34,18 @@ header{
     text-decoration: none;
     color: #333;
     font-size: 35px;
+    width: 100%;
+    height: 100%;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    margin-top: 1px;
+}
+
+.logoMobile{
+    display: none;
 }
 
 .navigation{
@@ -34,37 +54,94 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    z-index: 1;
 }
 
 .menuDesktop {
     width: 100%;
     height: 100%;
+}
+
+.menuDesktop ul{
     display: flex;
     justify-content: end;
     align-items: center;
+    height: 50px;
+    margin-right: 100px;
 }
 
-.menuDesktop li{
+.menuDesktop ul li{
     list-style-type: none;
+    margin-top: 12px;
+}
+
+.menuDesktop ul li:hover::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: flex;
 }
 
 .menuDesktop li a{
     text-decoration: none;
     color: #333;
-    margin: 0 20px;
-    font-size: 20px;
+    margin: 0 10px;
+    font-size: 20px
+}
+
+.menuDesktop ul li a:hover{
+    transition: .4s;
+}
+
+
+.menuDesktop ul li:hover .subMenu{
+    display: block;
+    position: absolute;
+}
+
+.menuDesktop ul li:hover .subMenu ul{
+    display: block;
+}
+
+.subMenu ul li{
+    width: 150px;
+    transition: .3s;
+}
+
+.subMenu ul li a:hover{
+    transition: .3s;
+}
+
+.subMenu ul li a{
+    color: #fff;
+}
+
+.subMenu{
+    display: none;
+    height: 200px;
+}
+
+.bars3{
+    display: none;
+}
+
+.open{
+    display: none;
+}
+
+.close{
+    display: none;
 }
 
 .menuMobile{
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
 .menuMobile li{
     width: 100%;
     height: 20px;
-    margin-right: 30px;
     list-style-type: none;
     display: none;
 }
@@ -73,6 +150,8 @@ main{
     width: 100%;
     height: 90%;
     display: flex;
+    flex-wrap: wrap;
+    background: var(--davys-grey);
 }
 
 .box1{
@@ -81,6 +160,10 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.box1 img{
+    border-radius: 10px;
 }
 
 .box2{
@@ -99,48 +182,123 @@ main{
     font-size: 25px;
 }
 
-@media screen and (max-width:673px) {
-    .menuDesktop li{
+
+@media screen and (max-width:800px) {    
+    .menuDesktop{
         display: none;
-    }
-
-    .menuMobile li{
-        display: flex;
-        width: 100%;
-        position: relative;
-        top: 40px;
-        height: 35px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menuMobile li a{
-        text-decoration: none;
-        color: black;
-        font-size: 25px;
-    }
-
-    .menuMobile{
-        width: 100%;
     }
 
     header{
         display: flex;
         flex-direction: column;
+        width: 100%;
+        height: 100px;
+        background-image: url(./IMG/4comfort_logo.png);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position-y: -140px;
+        background-position: absolute;
+    }
+
+    .logoMobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        font-size: 40px;
+    }
+
+    .logoMobile p{
+        color: rgb(108, 108, 243);;
+        animation: logoAnimation 2s infinite;
     }
 
     .logo{
         width: 100%;
+        height: 100px;
+        display: none;
+    }
+
+    .bars3{
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .bars3 button{
+        background: none;
+        border: none;
+        margin-top: 18px;
+        position: absolute;
+        top: 25px;
+        right: 15px;
+    }
+
+    .close{
+        display: none;
     }
 
     .navigation{
         width: 100%;
     }
 
-    main{
+    .menuMobile{
+        display: none;
+        position: relative;
+        top: 100px;
+    }
+
+    .menuMobile li{
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 40px;
+        background: rgba(14, 13, 13, 0.4);
+    }
+
+    .menuMobile li a{
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width:530px){
+    main{
+        display: block;
+    }
+
+    .box1{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box1 img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .box2{
+        width: 100%;
+        height: 300px;
+        display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+        top: -100px;
+    }
+
+    .box2 h1{
+        margin-left:50px;
+        font-size: 40px;
+    }
+
+    .box2 h3{
+        font-size:20px ;
     }
 }
