@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: ;
 
 }
 
@@ -28,6 +29,7 @@ section{
 .titulo p {
     max-width: 700px;
     display: inline-block;
+    color: #fff;
 }
 
 
@@ -93,6 +95,50 @@ section{
     cursor: pointer;
     max-width: 150px;
 }
+
+
+.rodape{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: auto;
+    column-gap: 2vw;
+    margin-left: 1vw;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.icones{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icones img {
+    width: 50px;
+}
+
+
+.appstore {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px 0px;
+}
+
+.appstore .store {
+    width: 100px;
+}
+
+
+
+
+
+
+
+
+
 
 
 .copyright {
