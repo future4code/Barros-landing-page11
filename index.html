@@ -1,60 +1,277 @@
 <!DOCTYPE html>
-<html lang=pt_BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <title>4Comfort Shoes</title>
+    <link rel="stylesheet" href="./indexMobile.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <header>
-            <div class="logo"><img src="./IMG/4comfort_logo.png" alt=""></div>
-            <div class="logoMobile"></div>
+            <div class="logo">
+                <img src="./IMG/4comfort_logo.png" alt="" width="100">
+            </div>
             <div class="navigation">
-                <div class="bars3 open"><button onclick="mobileDropDown()"><img width="30" src="./IMG/menu-button.png" alt=""></button></div>
-                <div class="bars3 close"><button onclick="mobileDropDown()"><img width="30" src="./IMG/close.png" alt=""></button></div>
                 <nav class="menuDesktop">
                     <ul>
                         <li><a href="#">Promoções</a></li>
-                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
                         <li><a href="#">Cases de sucesso</a></li>
                         <li><a href="#">Sobre nós</a>
                             <div class="subMenu">
                                 <ul>
-                                    <li><a href="#">Quem somos</a></li>
-                                    <li><a href="#">Nosso time</a></li>
-                                    <li><a href="#">Contato</a></li>
-                                    <li><a href="#">Onde estamos</a></li>
-                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#titulo1">Quem somos</a></li>
+                                    <li><a href="#equipeTeam">Nosso time</a></li>
+                                    <li><a href="#contato">Contato</a></li>
                                 </ul>
                             </div>
                         </li>    
                     </ul>
                 </nav>
-                <nav class="menuMobile" id="menuMob">
-                    <li><a href="#">Promoções</a></li>
-                    <li><a href="#">Produtos</a></li>
-                    <li><a href="#">Cases de sucesso</a></li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Nosso time</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Onde estamos</a></li>
-                    <li><a href="#">FAQ</a></li>    
+            </div>
+            <div class="navigationMobile">
+                <nav class="menuMobile">
+                    <ul>
+                        <li><a href="#">Promoções</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#">Cases de sucesso</a></li>
+                        <li><a href="#">Sobre nós</a>
+                        <li><a href="#titulo1">Quem somos</a></li>
+                        <li><a href="#equipeTeam">Nosso time</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
                 </nav>
             </div>
+            <button onclick="chamar()"><img src="./IMG/menu-button.png" alt="" width="10"></button>
         </header>
-        <main>
-            <div class="box1">
-                <img src="./IMG/banner.webp" width="200" alt="">
-            </div>
-            <div class="box2">
+        <section class="principal">
+            <div class="bannerIntro"><img src="./IMG/tenis-casual.png" alt=""></div>
+            <div class="slogan">
                 <h1>Ande com a moda ao seus pés</h1>
-                <h3>Aqui você encontra os melhores e <br> mais confortáveis tênis casuais</h3>
+                <h3>Aqui você encontra os melhores e <br>
+                    mais confortáveis tênis casuais</h3>
+            </div>
+        </section>
+        <div class="tittleProdutos">
+            <h1>Confira nossos produtos</h1>
+        </div>
+        <section class="produtos" id="produtos">
+            <div class="produtoSelected">
+                <label class="nomeProduto" for="">Bota</label>
+                <img src="./IMG/produtos/img1.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 199,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img2.jpg" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 99,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img3.webp" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 109,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img4.jpg" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 109,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img5.webp" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 139,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img6.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 149,99</label>
+            </div>
+            <div class="produto" id="produto7">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img7.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 79,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img8.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 119,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img9.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 114,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img10.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 133,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img11.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 59,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img12.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 99,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img13.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 99,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img14.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 129,99</label>
+            </div>
+            <div class="produto">
+                <label class="nomeProduto" for="">Sapato</label>
+                <img src="./IMG/produtos/img15.jfif" alt="">
+                <label class="nomeProdutoMobile" for="">Sapato</label>
+                <label class="preco" for="">R$ 79,99</label>
+            </div>
+        </section>
+        <section class="bannerSecond">
+            <div class="tittleBanner">
+                <h1>Sobre a 4Comfort</h1>
+            </div>
+            <div class="infoText">
+                <div class="boxText">
+                    <h2>Caminhe para um novo futuro</h2>
+                    <p>Descubra a perfeita união entre conforto e estilo, garantindo o melhor para sua aparência e seus pés.</p>
+                </div>    
+            </div>
+        </section>
+        <main>
+            <h1>Nossos valores principais</h1>
+            <div id="valores">
+                <div class="boxValores">
+                    <img src="ImgSobreNos/iconCliente.png" alt="Ícone ilustrando satisfação do cliente">
+                    <h3>Satisfação do Cliente</h3>
+                    <p>Queremos que você se sinta realizado com seu novo tênis, e para isso nós dispomos de uma garantia vitalícia para que você ande sempre na moda.</p>
+                </div>
+                <div class="boxValores">
+                    <img src="ImgSobreNos/iconResist.png" alt="Ícone ilustrando resistência do produto">
+                    <h3>Produto Duradouro</h3>
+                    <p>Todo o processo foi feito para que seu investimento seja o mais duradouro possível, garantindo um usofruto em qualquer ambiente e condição.</p>
+                </div>
+                <div class="boxValores">
+                    <img src="ImgSobreNos/iconMaterial.png" alt="Ícone ilustrando material utilizado">
+                    <h3>Material de Qualidade</h3>
+                    <p>Todo o poliester utilizado provêm de reciclagem de plástico retirado dos mares, e nosso algodão é produzido orgânicamente por pequenos produtores. </p>
+                </div>
             </div>
         </main>
+        <div class="background">
+            <h1 id="titulo1">Nossa história:</h1>
+            <p id="textoPrincipal">Nossa empresa surgiu ao perceber a falta de estilo dos Startupeiros de todo o mundo, nossa ideologia é trazer a <b>inovação e beleza</b> para o meio, que carecia de algo que direcionasse essa demanda.
+                Planejamos trazer e levar você em <b>cada passo</b> de sua jornada como empreendedor. <b>Nessa caminhada vamos acompanhar o andar</b> do seu conforto, estilo e proteção.
+                Exatamente, pois não é só sobre ficar rico e famoso, mas sobre <b>fazer isso bem vestido.</b>
+                Demos nossas primeiras passadas na grandiosa Faria Lima, seguimos como andarilhos conhecendo cada vez mais o Brasil e entregando para todo ele.
+                Esperamos que você também entre no ritmo e ande junto conosco para um futuro cada vez mais brilhante e feliz.</p>
+        </div>
+        <div>
+            <h1>Nossa Equipe</h1>
+            <div class="equipe" id="equipeTeam">
+                <div class="Funcionario">
+                    <img src="ImgSobreNos/Pessoa1.jpg" alt="Foto de uma mulher negra adulta sorridente" class="miniaturaFoto">
+                    <h3>Juliana Camargo</h3>
+                    <p><b>CEO Máxima</b> <br><i>Rio de Janeiro - RJ</i></p>
+                </div>
+                <div class="Funcionario">
+                    <img src="ImgSobreNos/Pessoa2.png" alt="Foto de um homem asiático de terno encostado" class="miniaturaFoto">
+                    <h3>Ericleison da Silva</h3>
+                    <p><b>Diretor de Produto</b> <br><i>Santos - SP</i></p>
+                </div>
+                <div class="Funcionario">
+                    <img src="ImgSobreNos/Pessoa3.png" alt="Foto do busto de um jovem negro com leve sorriso" class="miniaturaFoto">
+                    <h3>William Stark</h3>
+                    <p><b>Diretor de Contabilidade</b> <br><i>Belo Horizonte - MG</i></p>
+                </div>
+                <div class="Funcionario"> 
+                    <img src="ImgSobreNos/Pessoa4.png" alt="Foto de um senhor de idade branco fumando cigarro" class="miniaturaFoto">
+                    <h3>Gustavo Oliveira</h3>
+                    <p><b>Diretor de Marketing</b> <br><i>São Paulo - SP</i></p>
+                </div>
+                <div class="Funcionario">
+                    <img src="ImgSobreNos/Pessoa5.png" alt="Foto de uma mulher de meia-idade branca sorrindo" class="miniaturaFoto">
+                    <h3>Telma Ribeiro</h3>
+                    <p><b>Recursos Humanos</b> <br><i>Piraporinha do Sul - ES</i></p>
+                </div>
+                <div class="Funcionario">
+                    <img src="ImgSobreNos/Pessoa6.png" alt="Retrato de um jovem branco de óculos com leve sorriso" class="miniaturaFoto">
+                    <h3>Josevaldo Carvalho</h3>
+                    <p><b>Estagiário geral</b> <br><i>Duque de Caxias - RJ</i></p>
+                </div>
+            </div>
+        </div>
+        <section class="contato" id="contato">
+            <div class="titulo">
+                <h2>Contato</h2>
+                <p>Mande uma mensagem para nós!</p>
+            </div>
+    
+            <div class="formulario">
+    
+                <div class="colunaContato">
+                    <div class="col50">
+                        <input type="text" name="nome" placeholder="Primeiro Nome">
+                    </div>
+                
+                    <div class="col50">
+                        <input type="text" name="nome" placeholder="Último Nome">
+                    </div>
+                </div>
+    
+                <div class="colunaContato">
+                    <div class="col50">
+                        <input type="text" name="numero" placeholder="Insira seu celular">                 
+                    </div>
+                
+                    <div class="col50">
+                        <input type="text" name="email" placeholder="Insira seu e-mail">
+                    </div>
+                </div>
+    
+                <div class="colunaContato">
+                    <div class="col100">
+                        <textarea placeholder="Escreva sua mensagem"></textarea>
+                    </div>
+                </div>
+    
+                <div class="colunaContato">
+                    <div class="col100">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+    
+            </div>
+    
+        </section>
+    
+    <div class="copyright">
+        <p>Copyright © 2022 4Comfort. Todos os direitos reservados.</p>
     </div>
+    </main>
     <script src="./index.js"></script>
 </body>
 </html>

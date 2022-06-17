@@ -101,3 +101,10 @@ h3 {
     margin-top: 22vw;
     margin-left: 12vw;
 }
+
+
+@media screen and (max-width:400px) {
+    .banner{
+        position: relative
+    }
+}
