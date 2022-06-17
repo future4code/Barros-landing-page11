@@ -1,8 +1,26 @@
 @media screen and (max-width:400px) {
+
+    .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header{
+        width: 100vw;
+    }
+    
+    header button{
+        display: block;
+        margin-right: 15px;
+        width: 30px;
+        height: 30px;
+    }
+    
     .container{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100vw;
     }
 
     .menuDesktop{
@@ -10,8 +28,87 @@
     }
 
     .principal{
+        width: 100vw;
         display: flex;
         flex-direction: column;
     }
-    
+
+    .bannerIntro{
+        width: 100vw;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .bannerIntro img{
+        width: 100vw;
+    }
+
+    .slogan{
+        width: 100vw;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: 360px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+    }
+
+    .slogan h1{
+        font-size: 30px;
+    }
+
+    .slogan h3{
+        font-size: 19px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .tittleProdutos{
+        position: relative;
+        top: -80px;
+    }
+
+    .produtos{
+        position: relative;
+        left: -30px;
+        top: -150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produtoSelected{
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .produtoSelected img{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .produto{
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        justify-content: space-between;
+    }
+
+    .nomeProduto{
+        display: none;
+    }
+
+    .produto img{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+
+    .preco{
+        margin-right: 10px;
+    }
 }
