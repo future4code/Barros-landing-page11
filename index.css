@@ -114,6 +114,7 @@ header button{
 
 .bannerIntro img{
     width: 700px;
+    animation: slogan 10s infinite linear;
 }
 
 .slogan{
@@ -134,6 +135,7 @@ header button{
     font-size: 50px;
     margin: 50px 0;
 }
+
 
 .slogan h3{
     font-size: 35px;

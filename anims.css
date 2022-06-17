@@ -1,5 +1,13 @@
 @keyframes slogan {
-    0%{transform: translate(0px);}
-    50%{transform: translateY(100px);}
-    100%{transform: translate(0px);}
+    0%{
+        color: black;
+    }
+     50%{
+        color:#DAE5E8ff;
+        transform: scale(1.1);
+     }
+
+     100%{
+        color: black;
+     }
 }
