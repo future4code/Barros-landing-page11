@@ -1,0 +1,17 @@
+@media screen and (max-width:400px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menuDesktop{
+        display: none;
+    }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
